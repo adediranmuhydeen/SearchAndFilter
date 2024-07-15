@@ -1,6 +1,7 @@
 import React from "react";
+import './search.css';
 
-export const FirstQUestion = () =>{
+function Search  (){
   const fruits =[
     "Apple",
     "Apricot",
@@ -15,10 +16,13 @@ export const FirstQUestion = () =>{
     "GrapeFruit",
     "Mango",
   ];
-
-  return(
-    <div>
-      <input type="text" placeholder="Search her ..." />
-    </div>
-  )
+  
+    return(
+      <div className="container">
+        <input type="text" placeholder="Search here ..." />
+      </div>
+    )
+  
 }
+
+export default Search;
