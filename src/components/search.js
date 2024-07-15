@@ -1,5 +1,5 @@
 import React from "react";
-import './search.css';
+//import './search.css';
 
 function Search  (){
   const fruits =[
@@ -20,6 +20,9 @@ function Search  (){
     return(
       <div className="container">
         <input type="text" placeholder="Search here ..." />
+        {fruits.map((fruit)=>{
+          return <p>{fruit}</p>
+        })}
       </div>
     )
   
