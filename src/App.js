@@ -1,28 +1,10 @@
 import './App.css';
+import Search from "../src/components/search"
 
 function App() {
-  const FirstQUestion = () =>{
-    const fruits =[
-      "Apple",
-      "Apricot",
-      "Banana",
-      "Blueberry",
-      "Cherry",
-      "Cranberry",
-      "Date",
-      "Dragonfruit",
-      "Fig",
-      "Grape",
-      "GrapeFruit",
-      "Mango",
-    ];
-  
-    return(
-      <div>
-        <input type="text" placeholder="Search her ..." />
-      </div>
-    )
-  }
+  return (
+    <Search/>
+  );
 }
 
 export default App;
