@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 //import './search.css';
 
 function Search  (){
@@ -16,11 +16,20 @@ function Search  (){
     "GrapeFruit",
     "Mango",
   ];
-  
+
+  const [fruitsData, setFruitsData]  = useState(fruits);
+  const [seachItem, setSearchItem] = useState("");
+
+  const filteredFruits = fruitsData.filter((fruit) => fruit.toLowerCase().includes(seachItem.toLowerCase()) );
+
+  const handleInput = (e) =>{
+    setSearchItem(e.target.value);
+    console.log(seachItem)
+  };
     return(
       <div className="container">
-        <input type="text" placeholder="Search here ..." />
-        {fruits.map((fruit)=>{
+        <input type="text" placeholder="Search here ..." onChange={handleInput}/>
+        {filteredFruits.map((fruit)=>{
           return <p>{fruit}</p>
         })}
       </div>
