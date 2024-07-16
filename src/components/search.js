@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-//import './search.css';
+import './search.css';
 
 function Search  (){
   const fruits =[
